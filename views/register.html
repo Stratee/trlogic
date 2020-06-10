@@ -1,0 +1,60 @@
+<?php
+if (!isset($_POST['lang']) || $_POST['lang'] == 'ru'){
+    require_once('../misc/languages/ru.php');
+}
+elseif ($_POST['lang'] == 'en'){
+    require_once('../misc/languages/en.php');
+}
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Регистрация нового пользователя</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/main.js" defer></script>
+</head>
+<body>
+    <div class="form-wrapper">
+        <form action="../controllers/UserController.php" method="post" enctype="multipart/form-data" class="register-form" id="register-form">
+            <h3 class="form-header"><?php print ($langContent['register'])?></h3>
+            <div class="user-nick">
+                <div class="valid-check" id="valid-nick"><?php print ($langContent['valid_nick'])?></div>
+                <input type="text" name="nick" class="form-field" id="nick" required placeholder="<?php print ($langContent['nick_placeholder'])?>">
+            </div>
+            <div class="user-mail">
+                <div class="valid-check" id="valid-mail"><?php print ($langContent['valid_mail'])?></div>
+                <input type="text" name="mail" class="form-field" id="mail" required placeholder="<?php print ($langContent['mail_placeholder'])?>">
+            </div>
+            <div class="phone">
+                <div class="valid-check" id="valid-phone"><?php print ($langContent['valid_phone'])?></div>
+                <input type="text" name="phone" class="form-field" id="phone" required placeholder="<?php print ($langContent['phone_placeholder'])?>">
+            </div>
+            <div class="firstname">
+                <div class="valid-check" id="valid-firstname"><?php print ($langContent['valid_phone'])?></div>
+                <input type="text" name="firstname" class="form-field" id="firstname" placeholder="<?php print ($langContent['firstname_placeholder'])?>">
+            </div>
+            <div class="lastname">
+                <div class="valid-check" id="valid-lastname"><?php print ($langContent['valid_phone'])?></div>
+                <input type="text" name="lastname" class="form-field" id="lastname" placeholder="<?php print ($langContent['lastname_placeholder'])?>">
+            </div>
+            <div class="image">
+                <div class="valid-check" id="valid-image-type"><?php print ($langContent['valid_image_type'])?></div>
+                <div class="valid-check" id="valid-image-size"><?php print ($langContent['valid_image_size'])?></div>
+                <input type="file" name="image" class="form-field image-field" id="image">
+                <label for="image" class="image-label"><?php print ($langContent['input_image'])?>
+                    <span id="image-uploaded"><?php print ($langContent['image_stub'])?></span>
+                </label>
+            </div>
+            <div class="register-btn">
+                <input type="submit" id="register" value="<?php print ($langContent['reg_btn'])?>">
+            </div>
+            <div class="required-desc"><?php print ($langContent['required_desc'])?></div>
+        </form>
+        <form action="" method="post" class="language-form" id="language-form">
+            <input type="submit" value="ru" name="lang">
+            <input type="submit" value="en" name="lang">
+        </form>
+    </div>
+</body>
+</html>

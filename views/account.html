@@ -1,0 +1,48 @@
+<?php
+session_start();
+$userdata = $_SESSION['userdata'];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Account</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="account-wrapper">
+        <div class="account">
+            <h3>Личный кабинет</h3>
+            <div class="content">
+                <div class="left-col">
+                    <img src="<?php print ($userdata['imagesource']) ?>" alt="image">
+                </div>
+                <div class="right-col">
+                    <table class="user-data">
+                        <tr class="user-data-field">
+                            <td>Псевдоним</td>
+                            <td class="data-value"><?php print ($userdata['nick']) ?></td>
+                        </tr>
+                        <tr class="user-data-field">
+                            <td>E-mail адрес</td>
+                            <td class="data-value"><?php print ($userdata['mail']) ?></td>
+                        </tr>
+                        <tr class="user-data-field">
+                            <td>Телефон</td>
+                            <td class="data-value"><?php print ($userdata['phone']) ?></td>
+                        </tr>
+                        <tr class="user-data-field">
+                            <td>Имя</td>
+                            <td class="data-value"><?php print ($userdata['firstname']) ?></td>
+                        </tr>
+                        <tr class="user-data-field">
+                            <td>Фамилия</td>
+                            <td class="data-value"><?php print ($userdata['lastname']) ?></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

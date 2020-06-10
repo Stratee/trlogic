@@ -1,0 +1,139 @@
+/* Registration page */
+
+.form-wrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    /*height: 50%;*/
+    margin: auto;
+    background: #56c2e6;
+    opacity: 0.5;
+    border-radius: 10px;
+    padding-bottom: 25px;
+}
+
+.form-header{
+    text-align: center;
+}
+
+.register-form > div{
+    width: 76%;
+    margin: auto;
+}
+
+.register-form div.register-btn{
+    text-align: center;
+    width: 180px;
+}
+
+.register-form div.register-btn input{
+    height: 40px;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.register-form div input{
+    width: 100%;
+    height: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding-left: 5px;
+}
+
+.register-form .valid-check{
+    font-size: 0.65em;
+    color: #FF0000;
+    display: none;
+}
+
+.register-form .required-desc{
+    text-align: right;
+    font-size: 0.7em;
+}
+
+.register-form .image-field{
+    opacity: 0;
+}
+
+.register-form .image-label{
+    font-size: 0.75em;
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 20px;
+    background: #fff;
+    margin-top: -34px;
+    margin-bottom: 25px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.register-form .image-label span{
+    position: absolute;
+    left: 140px;
+    width: max-content;
+}
+
+.language-form{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+
+/*Account page*/
+
+.account-wrapper{
+    width: 100%;
+    height: 100%;
+}
+
+.account{
+    width: 80%;
+    margin: auto;
+}
+
+.account .content{
+    display: flex;
+}
+
+.account .left-col{
+    width: 30%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.account .left-col img{
+    width: 80%;
+}
+
+.account .right-col{
+    width: 70%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.account .right-col .user-data{
+    width: 100%;
+}
+
+.account .right-col tr{
+    width: 100%;
+}
+
+.account .right-col tr:nth-child(odd){
+    background: #cccccc;
+}
+
+.account .right-col td{
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
